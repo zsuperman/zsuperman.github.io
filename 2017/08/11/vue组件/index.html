@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Vue组件 | Hello | 康凌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue,组件">
+    <meta name="description" content="vuevue组件使用 vue组件的定义与使用  一个.vue文件就是一个vue组件 组成(3个部分)  模板页面:  123&amp;lt;template&amp;gt;  页面模板&amp;lt;/template&amp;gt;  JS默认模块对象:  12345678&amp;lt;script&amp;gt;  export default &amp;#123;    data() &amp;#123;return &amp;#123;&amp;#125;&amp;#125">
+<meta name="keywords" content="vue,组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue组件">
+<meta property="og:url" content="http://yoursite.com/2017/08/11/vue组件/index.html">
+<meta property="og:site_name" content="Hello">
+<meta property="og:description" content="vuevue组件使用 vue组件的定义与使用  一个.vue文件就是一个vue组件 组成(3个部分)  模板页面:  123&amp;lt;template&amp;gt;  页面模板&amp;lt;/template&amp;gt;  JS默认模块对象:  12345678&amp;lt;script&amp;gt;  export default &amp;#123;    data() &amp;#123;return &amp;#123;&amp;#125;&amp;#125">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-21T02:04:52.699Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue组件">
+<meta name="twitter:description" content="vuevue组件使用 vue组件的定义与使用  一个.vue文件就是一个vue组件 组成(3个部分)  模板页面:  123&amp;lt;template&amp;gt;  页面模板&amp;lt;/template&amp;gt;  JS默认模块对象:  12345678&amp;lt;script&amp;gt;  export default &amp;#123;    data() &amp;#123;return &amp;#123;&amp;#125;&amp;#125">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/tou.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Akang</h5>
+          <a href="mailto:303429682@qq.com" title="303429682@qq.com" class="mail">303429682@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zsuperman" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/" target="_blank" >
+                <i class="icon icon-lg icon-gift"></i>
+                邮箱
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Vue组件</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Vue组件</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-11T02:32:28.000Z" itemprop="datePublished" class="page-time">
+  2017-08-11
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue组件使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">vue组件使用</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-vue组件"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Vue组件</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-11 10:32:28" datetime="2017-08-11T02:32:28.000Z"  itemprop="datePublished">2017-08-11</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><h2 id="vue组件使用"><a href="#vue组件使用" class="headerlink" title="vue组件使用"></a>vue组件使用</h2><ul>
+<li><p>vue组件的定义与使用</p>
+<ul>
+<li>一个.vue文件就是一个vue组件</li>
+<li><p>组成(3个部分)</p>
+<ul>
+<li><p>模板页面: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  页面模板</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>JS默认模块对象: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">  export default &#123;</div><div class="line">    data() &#123;return &#123;&#125;&#125;,</div><div class="line">    methods: &#123;&#125;,</div><div class="line">    computed: &#123;&#125;,</div><div class="line">    components: &#123;&#125;</div><div class="line">  &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>页面样式: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;style scoped&gt;  //scoped代表样式只针对当前组件的模板页面</div><div class="line">  样式定义</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>基本使用<br>在父组件对象的components属性中配置子组件(将组件映射成标签)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;hello tt=&apos;abc&apos;&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  import Hello from &apos;./components/Hello&apos;</div><div class="line">  export default &#123;</div><div class="line">    components: &#123;</div><div class="line">      Hello</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>关于标签名与标签属性名书写问题:</p>
+<ul>
+<li>标签名与标签属性名不区分大小写</li>
+<li>标签名: 如果组件名是XxxYyy, 标签名必须为<xxx-yyy></xxx-yyy></li>
+<li>属性名: 如果标签属性名为xxx-yyy, 组件得到的属性名为: xxxYyy</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>组件化编码的基本流程</p>
+<ul>
+<li>拆分界面, 抽取组件</li>
+<li>编写静态组件, 并使用</li>
+<li>编写动态组件, 并使用<ul>
+<li>初始化数据, 动态显示初始化界面</li>
+<li>响应用户操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>组件间通信</p>
+<ul>
+<li>组件通信的2种方式<ul>
+<li>props</li>
+<li>vue的自定义事件机制</li>
+</ul>
+</li>
+<li>基本原则: 不要在子组件中直接修改父组件的状态数据</li>
+<li><p>使用props</p>
+<ul>
+<li>组件标签: <my-component name="tom" :age="myAge" :set-name="setName"></my-component></li>
+<li><p>组件: MyComponent</p>
+<ul>
+<li><p>在组件内声明所有的props</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//方式一: 只指定名称</div><div class="line">props: [&apos;name&apos;, &apos;age&apos;, &apos;setName&apos;]</div><div class="line">//方式二: 指定名称和类型</div><div class="line">props: &#123;</div><div class="line">  name: String,</div><div class="line">  age: Number,</div><div class="line">  setNmae: Function</div><div class="line">&#125;</div><div class="line">//方式三: 指定名称/类型/必要性/默认值</div><div class="line">props: &#123;</div><div class="line">  name: &#123;type: String, required: true, default:xxx&#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>所有props的属性都会成为component对象的属性, 模板页面可以直接引用</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>使用vue的自定义事件机制</p>
+<ul>
+<li><p>绑定事件监听</p>
+<ul>
+<li><p>方式一: 通过$on()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">this.$on(&apos;delete_todo&apos;, function (todo) &#123;</div><div class="line">  this.deleteTodo(todo)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>方式二: 通过events选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">events: &#123;</div><div class="line">  &apos;delete_todo&apos;: function (todo) &#123;</div><div class="line">    this.deleteTodo(todo)</div><div class="line">  &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+</li>
+<li><p>方式三: 通过v-on绑定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@delete_todo=&quot;deleteTodo&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>触发事件(3种情况)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">this.$emit(eventName, data): 在当前组件触发事件</div><div class="line">this.$dispatch(eventName, data): 分给父辈组件(冒泡)</div><div class="line">this.$broadcast(eventName, data): 广播给后代组件</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-08-21T02:04:52.699Z" itemprop="dateUpdated">2017-08-21 10:04:52</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/tou.jpg" alt="Akang">
+            Akang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/组件/">组件</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/11/vue组件/&title=《Vue组件》 — Hello&pic=http://yoursite.com/img/tou.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/11/vue组件/&title=《Vue组件》 — Hello&source=做自己爱做的事，爱自己在做的事！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/11/vue组件/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue组件》 — Hello&url=http://yoursite.com/2017/08/11/vue组件/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/11/vue组件/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/11/vue-router/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Vue路由</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/ww.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/ww.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span> </span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Akang &copy; 2014 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/11/vue组件/&title=《Vue组件》 — Hello&pic=http://yoursite.com/img/tou.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/11/vue组件/&title=《Vue组件》 — Hello&source=做自己爱做的事，爱自己在做的事！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/11/vue组件/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue组件》 — Hello&url=http://yoursite.com/2017/08/11/vue组件/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/11/vue组件/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/08/11/vue组件/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不要离开我！！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '我就知道你是爱我的。';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
