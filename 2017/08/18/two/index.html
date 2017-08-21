@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Vue.js是什么? | Hello | 康凌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue">
+    <meta name="description" content="vuevue-使用 Vue.js是什么?  一位华裔前Google工程师开发的前端js库 一个MVVM的框架 核心概念 数据绑定 组件 与angular.js类似的是声明式开发，但性能高于angular，体积小很多, 比较适合移动端开发 它本身不是全能框架, 只关注UI, 如果需要router/ajax, 可以使用对应插件或使用别的库来实现     基本使用  引入vue.js 创建Vue对象(v">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.js是什么?">
+<meta property="og:url" content="http://yoursite.com/2017/08/18/two/index.html">
+<meta property="og:site_name" content="Hello">
+<meta property="og:description" content="vuevue-使用 Vue.js是什么?  一位华裔前Google工程师开发的前端js库 一个MVVM的框架 核心概念 数据绑定 组件 与angular.js类似的是声明式开发，但性能高于angular，体积小很多, 比较适合移动端开发 它本身不是全能框架, 只关注UI, 如果需要router/ajax, 可以使用对应插件或使用别的库来实现     基本使用  引入vue.js 创建Vue对象(v">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-21T02:21:56.547Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue.js是什么?">
+<meta name="twitter:description" content="vuevue-使用 Vue.js是什么?  一位华裔前Google工程师开发的前端js库 一个MVVM的框架 核心概念 数据绑定 组件 与angular.js类似的是声明式开发，但性能高于angular，体积小很多, 比较适合移动端开发 它本身不是全能框架, 只关注UI, 如果需要router/ajax, 可以使用对应插件或使用别的库来实现     基本使用  引入vue.js 创建Vue对象(v">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/tou.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Akang</h5>
+          <a href="mailto:303429682@qq.com" title="303429682@qq.com" class="mail">303429682@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zsuperman" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/" target="_blank" >
+                <i class="icon icon-lg icon-gift"></i>
+                邮箱
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Vue.js是什么?</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Vue.js是什么?</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-18T07:32:28.000Z" itemprop="datePublished" class="page-time">
+  2017-08-18
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue-使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">vue-使用</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-two"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Vue.js是什么?</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-18 15:32:28" datetime="2017-08-18T07:32:28.000Z"  itemprop="datePublished">2017-08-18</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><h2 id="vue-使用"><a href="#vue-使用" class="headerlink" title="vue-使用"></a>vue-使用</h2><ul>
+<li><p>Vue.js是什么?</p>
+<ul>
+<li>一位华裔前Google工程师开发的前端js库</li>
+<li>一个MVVM的框架</li>
+<li>核心概念<ul>
+<li>数据绑定</li>
+<li>组件</li>
+<li>与angular.js类似的是声明式开发，但性能高于angular，体积小很多, 比较适合移动端开发</li>
+<li>它本身不是全能框架, 只关注UI, 如果需要router/ajax, 可以使用对应插件或使用别的库来实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>基本使用</p>
+<ul>
+<li>引入vue.js</li>
+<li>创建Vue对象(vm), 指定选项(配置)对象</li>
+<li>el : 指定dom标签容器的选择器</li>
+<li>data : 指定初始化状态属性数据的对象<pre><code>对象/函数(返回一个对象)
+</code></pre></li>
+<li>页面中<pre><code>* 使用v-model: 实现双向数据绑定
+* 使用{{}}: 显示数据
+</code></pre></li>
+</ul>
+</li>
+<li><p>Vue对象的选项</p>
+<ul>
+<li>el<ul>
+<li>指定dom标签容器的选择器</li>
+<li>Vue就会管理对应的标签及其子标签</li>
+</ul>
+</li>
+<li>data<ul>
+<li>对象或函数类型<pre><code>* 指定初始化状态属性数据的对象
+* vue对象可以直接访问其属性
+* 页面中可以直接访问使用
+* 数据代理: 由vm对象来代理对data中所有属性的操作(读/写)
+</code></pre></li>
+</ul>
+</li>
+<li>methods<pre><code>* 包含多个方法的对象
+* 供页面中的事件指令来绑定回调
+* 回调函数默认有event参数, 但也可以指定自己的参数
+* 所有的方法由vue对象来调用, 访问data中的属性直接使用this.xxx
+</code></pre></li>
+<li>computed<pre><code>* 包含多个方法的对象
+* 对状态属性进行计算返回一个新的数据, 供页面获取显示
+* 一般情况下是相当于是一个只读的属性
+* 利用set/get方法来实现属性数据的计算读取, 同时监视属性数据的变化
+* 如何给对象定义get/set属性
+  * 在创建对象时指定: get name () {return xxx} / set name (value) {}
+  * 对象创建之后指定: Object.defineProperty(obj, age, {get(){}, set(value){}})
+</code></pre></li>
+<li>watch<ul>
+<li>Vue.$watch()<pre><code>* 包含多个属性监视的对象
+* 分为一般监视和深度监视
+</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;xxx&apos; : &#123;</div><div class="line">  deep : true,</div><div class="line">  handler : fun(value)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>扩展数组</p>
+<ul>
+<li>对数组的常用方法进行了包装(用于数据绑定)<ul>
+<li>$remove(item) : 删除数组中对应的元素</li>
+<li>$set(index, ele) : 给数组中指定下标指定对应的元素 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>过渡</p>
+<ul>
+<li>利用vue去操控css的动画</li>
+<li>transition/animation</li>
+<li>使用<ul>
+<li><div v-show="a" v-if="a" transition="xxx"></div></li>
+<li>定义css样式<ul>
+<li>.xxx-transition: 在其中去指定transition/animation</li>
+<li>.xxx-enter</li>
+<li>.xxx-leave</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>动画的钩子函数</li>
+</ul>
+</li>
+<li><p>生命周期</p>
+<ul>
+<li>vm/组件对象</li>
+<li>生命周期图</li>
+<li>主要的生命周期函数(钩子)<ul>
+<li>created(): 启动异步任务(发送ajax请求, 启动定时器)</li>
+<li>beforeDestroy(): 做一些收尾的工作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>页面指令</p>
+<ul>
+<li>v-text/v-html: 指定标签体</li>
+<li>v-text : 当作纯文本</li>
+<li>v-html : 将value作为html标签来解析</li>
+<li>v-if v-else v-show</li>
+<li>v-if : 如果vlaue为true, 当前标签会输出在页面中</li>
+<li>v-else : 与v-if一起使用, 如果value为false, 将当前标签输出到页面中</li>
+<li>v-show: 就会在标签中添加display样式, 如果vlaue为true, display=block, 否则是none</li>
+<li>v-for : 遍历</li>
+<li>遍历数组 : v-for=”person in persons”   $index</li>
+<li>遍历对象 : v-for=”value in person”   $key</li>
+<li>v-on : 绑定事件监听</li>
+<li>v-on:事件名, 可以缩写为: @事件名</li>
+<li>监视具体的按键: @keyup.keyCode   @keyup.enter</li>
+<li>阻止事件的冒泡和事件默认行为: @click.stop   @click.prevent</li>
+<li>隐含对象: $event</li>
+<li>v-bind : 强制绑定解析表达式  </li>
+<li>很多属性值是不支持表达式的, 就可以使用v-bind</li>
+<li>可以缩写为:  :id=’name’</li>
+<li>:class<ul>
+<li>:class=”a”<pre><code>* :class=&quot;{classA : isA, classB : isB}&quot;
+* :class=&quot;[classA, classB]&quot;
+</code></pre></li>
+</ul>
+</li>
+<li>:style<pre><code>:style=&quot;{color : color}&quot;
+</code></pre></li>
+<li>v-model</li>
+<li>双向数据绑定</li>
+<li>v-el : 标识某个标签</li>
+<li>v-el:xxx</li>
+<li>读取得到标签对象: this.$els.xxx</li>
+</ul>
+</li>
+<li><p>过滤器</p>
+<ul>
+<li><p>内置</p>
+<ul>
+<li>capitalize : 首字母大小</li>
+<li>uppercase : 全部大写</li>
+<li>lowercase : 全部小写</li>
+<li>currency : 货币化</li>
+<li>pluralize : 单数/复数处理</li>
+<li><p>json : json格式化</p>
+</li>
+<li><p>limitBy : 限定数组的部分元素(下标)</p>
+</li>
+<li>filterBy : 限定数组的部分元素(值)</li>
+<li>orderBy : 对数组进行排序</li>
+</ul>
+</li>
+<li>自定义</li>
+<li><p>全局过滤器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.filter(&apos;过滤器名&apos;, function(value, xxx, yyy) &#123;</div><div class="line">  //处理逻辑</div><div class="line">  return result;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部过滤器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">new Vue(&#123;</div><div class="line">  filters : &#123;</div><div class="line">    &apos;过滤器名&apos; : function(value, xxx, yyy) &#123;</div><div class="line">        //处理逻辑</div><div class="line">        return result;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>指令</p>
+<ul>
+<li>内置<ul>
+<li>v:text : 更新元素的 textContent</li>
+<li>v-html : 更新元素的 innerHTML</li>
+<li>v-if : 如果为true, 当前标签才会输出到页面</li>
+<li>v-else: 如果为false, 当前标签才会输出到页面</li>
+<li>v-show : 通过控制display样式来控制显示/隐藏</li>
+<li>v-for : 遍历数组/对象</li>
+<li>v-on : 绑定事件监听, 一般简写为@</li>
+<li>v-bind : 强制绑定解析表达式, 可以省略v-bind</li>
+<li>v-model : 双向数据绑定</li>
+<li>v-el : 为某个元素注册一个唯一标识, vue对象通过$els属性访问这个元素对象</li>
+<li>v-cloak : 使用它防止闪现表达式, 与css配合: [v-cloak] { display: none }</li>
+</ul>
+</li>
+<li><p>自定义</p>
+<ul>
+<li><p>注册全局指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vue.directive(&apos;my-directive&apos;, function(value)&#123;</div><div class="line">  this.el.innerHTML = value.toUpperCase();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>注册局部指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">directives : &#123;</div><div class="line">  &apos;my-directive&apos; : function(value) &#123;</div><div class="line">    this.el.innerHTML = value;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用指令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v-my-directive=&apos;xxx&apos;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-08-21T02:21:56.547Z" itemprop="dateUpdated">2017-08-21 10:21:56</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/tou.jpg" alt="Akang">
+            Akang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/18/two/&title=《Vue.js是什么?》 — Hello&pic=http://yoursite.com/img/tou.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/18/two/&title=《Vue.js是什么?》 — Hello&source=做自己爱做的事，爱自己在做的事！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/18/two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.js是什么?》 — Hello&url=http://yoursite.com/2017/08/18/two/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/18/two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/08/19/vue-cli的使用/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Vue-cli</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/03/new/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ES5</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/ww.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/ww.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span> </span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Akang &copy; 2014 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/18/two/&title=《Vue.js是什么?》 — Hello&pic=http://yoursite.com/img/tou.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/18/two/&title=《Vue.js是什么?》 — Hello&source=做自己爱做的事，爱自己在做的事！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/18/two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.js是什么?》 — Hello&url=http://yoursite.com/2017/08/18/two/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/18/two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/08/18/two/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不要离开我！！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '我就知道你是爱我的。';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
